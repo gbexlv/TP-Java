@@ -29,7 +29,7 @@ public class Programa {
 								break;
 								
 							case 2:
-								lista.addAll(CrearCombi(data));
+								lista.add(crearCombi(data));
 								break;
 								
 							case 0:
