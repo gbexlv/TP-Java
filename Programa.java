@@ -28,6 +28,10 @@ public class Programa {
 								lista.add(crearCoche(data));
 								break;
 								
+							case 2:
+								lista.addAll(CrearCombi(data));
+								break;
+								
 							case 0:
 								exit = true;
 								break;
@@ -73,14 +77,27 @@ public class Programa {
 	
 	public static Coche crearCoche(Scanner data)
 	{
-		Coche coche = new Coche();
+		Coche objeto = new Coche();
 		
 		System.out.print("Ingrese la patente del coche: ");
-		coche.setPatente(data.nextLine());
+		objeto.setPatente(data.nextLine());
 		
-		System.out.print("Ingrese la cantidad de pasajeros: ");
-		coche.setPasajeros(data.nextInt());
+		System.out.print("Ingrese la cantidad máxima de pasajeros: ");
+		objeto.setPasajeros(data.nextInt());
 		
-		return coche;
+		return objeto;
+	}
+	
+	public static Combi crearCombi(Scanner data)
+	{
+		Combi objeto = new Combi();
+		
+		System.out.print("Ingrese la patente: ");
+		objeto.setPatente(data.nextLine());
+		
+		System.out.print("Ingrese la cantidad máxima de pasajeros: ");
+		objeto.setPasajeros(data.nextInt());
+		
+		return objeto;
 	}
 }
